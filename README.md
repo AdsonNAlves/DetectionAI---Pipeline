@@ -93,6 +93,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ## Estrutura do diretório
 
 Raiz do projeto:
+```bash
 .
 ├── common
 │   └── utils.py
@@ -122,4 +123,4 @@ Raiz do projeto:
 ├── requirements.txt
 ├── yolo11m.pt
 └── README.md
-
+```
