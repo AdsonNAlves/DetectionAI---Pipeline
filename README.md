@@ -92,9 +92,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ```
 ## 📄 API Contract – Object Detection
 
-```bash
 🔹 Request 
 
+```bash
 {
     "image_url": "https:xpto",
     "image_id": 1,
