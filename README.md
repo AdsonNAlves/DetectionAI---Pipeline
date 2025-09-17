@@ -90,6 +90,73 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	 vim \
 	 && rm -rf /var/lib/apt/lists/*
 ```
+## 📄 API Contract – Object Detection
+
+```bash
+🔹 Request 
+
+{
+    "image_url": "https:xpto",
+    "image_id": 1,
+    "trap": 1,
+    "culture": "Cana",
+}
+```
+
+🔹 Response
+
+Retorno de um JSON estruturado com os resultados da detecção.
+
+```bash
+{
+    "trap": 1,
+    "image_id": 1,
+    "detections": [
+        {
+            "id": 0,
+            "class_id": 1,
+            "class_name": "Joaninha",
+            "confidence": 0.92,
+            "bbox": {
+                "xmin": 120,
+                "ymin": 50,
+                "xmax": 320,
+                "ymax": 400,
+            },
+        },
+
+        {
+            "id": 1,
+            "class_id": 2,
+            "class_name": "Broca",
+            "confidence": 0.92,
+            "bbox": {
+                "xmin": 120,
+                "ymin": 50,
+                "xmax": 320,
+                "ymax": 400,
+            },
+        }
+    ],
+
+    "metadata": {
+        "model": "yolo_v8m",
+        "model_versio": "2025_v1",
+        "classes": [
+            "Joaninha",
+            "Broca",
+        ],
+        "input_size": [
+            640, 640
+        ],
+        "bbox_format": "xyxy",
+
+    },
+    "inference_time_ms": 30,
+    "normalized": false, 
+}
+```
+
 ## Estrutura do diretório
 
 Raiz do projeto:
