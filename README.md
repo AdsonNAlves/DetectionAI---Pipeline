@@ -111,6 +111,7 @@ Retorno de um JSON estruturado com os resultados da detecção.
 {
     "trap": 1,
     "image_id": 1,
+    "ìmage_det": image_base64,
     "detections": [
         {
             "id": 0,
