@@ -1,5 +1,6 @@
 data
-common
 yolo11m.pt
 test/20250915v1/checkpoint
 networks/FasterRCNN-PyTorch
+checkpoint
+networks/__pycache__/*

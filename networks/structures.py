@@ -41,7 +41,7 @@ def _load_model(arch: str, weights: Optional[str | Path] = None) -> YOLO:
 	return YOLO(ckpt)
 
 
-def train_yolo(
+def train_model(
 	arch: str,
 	data_yaml: str | Path,
 	args_yaml: Optional[str | Path] = None,

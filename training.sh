@@ -1,13 +1,13 @@
 #!/bin/bash
 
 last="None"
-data=20250915
+data=20250919
 version=v1
 training=True #True|False
-arch="v11" #v8
+arch="frcnn" #use: 'v8', 'v11' or 'frcnn'
 weights="caminho/do/seu/checkpoint.pt"
 
-experiment_name=${data}_version_${version}_last_${last}
+experiment_name=${data}_version_${version}_last_${last}_arch_${arch}
 
 ## SAVING MODEL - default = experiment_name
 SAVED_PROJECT="checkpoint/"

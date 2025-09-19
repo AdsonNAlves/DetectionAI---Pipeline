@@ -1,8 +1,7 @@
 import argparse
-from ultralytics import YOLO
-from networks.structures import train_yolo, _read_yaml, _default_weights
-import json
 from pathlib import Path
+# Usa o dispatcher com suporte a YOLO v8/v11 e Faster R-CNN
+from networks.structures2 import train_model, _read_yaml, _default_weights
 
 def argparser():
     parser = argparse.ArgumentParser()
@@ -27,7 +26,7 @@ def argparser():
 
     parser.add_argument(
         '--arch',
-        help="Architecture to use ('v8' or 'v11')",
+        help="Architecture to use: 'v8', 'v11' or 'frcnn'",
         type=str,
         default='v11')
     
@@ -56,22 +55,29 @@ def main(args=None):
     print(f"Usando args.yaml: {args_yaml}")
 
 
+    # 1) Carrega args.yaml base
     overrides = _read_yaml(args_yaml)
+    # 2) CLI overrides (CLI sempre sobrescreve YAML)
     overrides["project"] = args.project
     overrides["name"] = args.name
     overrides["data"] = str(data_yaml)
+    # Mantém a chave 'model' para compatibilidade com fluxos antigos
     if args.weights:
         overrides["model"] = args.weights
     else:
-        overrides["model"] = _default_weights(args.arch)
+        # Para YOLO, define um default; para FRCNN, será ignorado
+        overrides["model"] = _default_weights(args.arch) if args.arch.lower() in {"v8","yolov8","yolo8","v11","yolov11","yolo11"} else None
 
-    # Treina o modelo YOLO
-    model = train_yolo(
+    # # Decide pesos a passar explicitamente (apenas YOLO usa)
+    # weights_to_pass = args.weights if args.arch.lower() in {"v8","yolov8","yolo8","v11","yolov11","yolo11"} else None
+
+    # Treina o modelo conforme a arquitetura escolhida
+    model = train_model(
         arch=arch,
         data_yaml=data_yaml,
-        args_yaml=None,  # Não passa o caminho, passa o dict de overrides
+        args_yaml=None,  # usamos o dict overrides diretamente
         weights=None,
-        overrides=overrides
+        overrides=overrides,
     )
 
     print("Treinamento concluído. Último estado do modelo salvo.")
