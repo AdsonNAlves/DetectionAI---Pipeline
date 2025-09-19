@@ -19,4 +19,4 @@ create-image:
 
 ## Run docker container
 create-container: 
-	$(DOCKER) run -it --entrypoint /bin/bash --group-add keep-groups -e NVIDIA_VISIBLE_DEVICES=GPU-3e98ebd8-0099-82a3-0389-bcd7ea84fc55 --shm-size=40g -v $(shell pwd):/app -p $(JUPYTER_HOST_PORT):$(JUPYTER_CONTAINER_PORT) --name $(CONTAINER_NAME) $(BASE_IMAGE_NAME)
+	$(DOCKER) run -it --entrypoint /bin/bash --group-add keep-groups -e NVIDIA_VISIBLE_DEVICES=GPU-3e98ebd8-0099-82a3-0389-bcd7ea84fc55 --shm-size=2g -v $(shell pwd):/app -p $(JUPYTER_HOST_PORT):$(JUPYTER_CONTAINER_PORT) --name $(CONTAINER_NAME) $(BASE_IMAGE_NAME)
