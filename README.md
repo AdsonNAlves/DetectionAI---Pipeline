@@ -193,7 +193,7 @@ Raiz do projeto:
 └── README.md
 ```
 ### Comparação
-![Comparação](notebooks/figures/comparacao_map.png)  
+<img src="notebooks/figures/comparacao_map.png" alt="Comparação" width="600">
 Evolução do mAP50-95 no conjunto de validação interno para YOLOv8, YOLOv11 e Faster R-CNN.  
 
 ### Comparativo
@@ -214,5 +214,5 @@ Tamanho do modelo: Peso em MB (impacta deploy).
 Generalização: (mAP externo / mAP interno) — retenção de performance fora do domínio original.  
 
 ### Observações
-![Observações](src/notebooks/figures/observacoes_modelos.png)  
+![Observações](notebooks/figures/observacoes_modelos.png)  
 Definições resumidas dos critérios calculados.  
