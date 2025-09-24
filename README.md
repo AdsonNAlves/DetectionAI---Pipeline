@@ -193,11 +193,11 @@ Raiz do projeto:
 └── README.md
 ```
 ### Comparação
-<img src="notebooks/figures/comparacao_map.png" alt="Comparação" width="600">
+![Comparação](notebooks/figures/Comparacao.png)  
 Evolução do mAP50-95 no conjunto de validação interno para YOLOv8, YOLOv11 e Faster R-CNN.  
 
 ### Comparativo
-![Comparativo](notebooks/figures/comparativo_metricas.png)  
+![Comparativo](notebooks/figures/comparativo_modelos.png)  
 Tabela consolidada: desempenho (mAP@50, mAP@50-95, Precision, Recall, F1), estabilidade, overfitting, eficiência, tempo de inferência, tamanho e razão de generalização.  
 
 Critério (resumo rápido):  
