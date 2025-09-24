@@ -193,26 +193,26 @@ Raiz do projeto:
 └── README.md
 ```
 ### Comparação
-![Comparação](src/notebooks/figures/comparacao_map.png)  
-Evolução do mAP50-95 no conjunto de validação interno para YOLOv8, YOLOv11 e Faster R-CNN.
+![Comparação](notebooks/figures/comparacao_map.png)  
+Evolução do mAP50-95 no conjunto de validação interno para YOLOv8, YOLOv11 e Faster R-CNN.  
 
 ### Comparativo
-![Comparativo](src/notebooks/figures/comparativo_metricas.png)  
-Tabela consolidada: desempenho (mAP@50, mAP@50-95, Precision, Recall, F1), estabilidade, overfitting, eficiência, tempo de inferência, tamanho e razão de generalização.
+![Comparativo](notebooks/figures/comparativo_metricas.png)  
+Tabela consolidada: desempenho (mAP@50, mAP@50-95, Precision, Recall, F1), estabilidade, overfitting, eficiência, tempo de inferência, tamanho e razão de generalização.  
 
-Critério (resumo rápido):
+Critério (resumo rápido):  
 
-mAP@50 / mAP@50-95: Qualidade global de detecção (localização + classificação).
-Precision: Proporção de detecções corretas (baixa → muitos falsos positivos).
-Recall: Cobertura dos objetos reais (baixa → muitos falsos negativos).
-F1-score: Equilíbrio entre Precision e Recall.
-Estabilidade: Desvio padrão dos últimos epochs (menor = treino consistente).
-Overfitting (gap): Diferença (val - train) em loss de boxes (alto = risco de overajuste).
-Eficiência: Época em que alcança 95% do melhor mAP (menor = mais rápido para ficar “quase ótimo”).
-Tempo de inferência: Latência média por imagem (ms).
-Tamanho do modelo: Peso em MB (impacta deploy).
-Generalização: (mAP externo / mAP interno) — retenção de performance fora do domínio original.
+mAP@50 / mAP@50-95: Qualidade global de detecção (localização + classificação).  
+Precision: Proporção de detecções corretas (baixa → muitos falsos positivos).  
+Recall: Cobertura dos objetos reais (baixa → muitos falsos negativos).  
+F1-score: Equilíbrio entre Precision e Recall.  
+Estabilidade: Desvio padrão dos últimos epochs (menor = treino consistente).  
+Overfitting (gap): Diferença (val - train) em loss de boxes (alto = risco de overajuste).  
+Eficiência: Época em que alcança 95% do melhor mAP (menor = mais rápido para ficar “quase ótimo”).  
+Tempo de inferência: Latência média por imagem (ms).  
+Tamanho do modelo: Peso em MB (impacta deploy).  
+Generalização: (mAP externo / mAP interno) — retenção de performance fora do domínio original.  
 
 ### Observações
 ![Observações](src/notebooks/figures/observacoes_modelos.png)  
-Definições resumidas dos critérios calculados.
+Definições resumidas dos critérios calculados.  
