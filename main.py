@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 # Usa o dispatcher com suporte a YOLO v8/v11 e Faster R-CNN
-from networks.structures2 import train_model, _read_yaml, _default_weights
+from networks.structures import train_model, _read_yaml, _default_weights
 
 def argparser():
     parser = argparse.ArgumentParser()

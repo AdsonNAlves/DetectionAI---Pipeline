@@ -6,3 +6,8 @@ checkpoint
 networks/__pycache__/*
 .DS_Store
 common/__pycache__/
+data2
+notebooks/test.ipynb
+notebooks/comparativo.ipynb
+test/20250924_frcnn/20250923_version_v1_last_None_arch_frcnn
+data2_external.yaml
