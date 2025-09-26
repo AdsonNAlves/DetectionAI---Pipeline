@@ -229,3 +229,5 @@ Este diretório contém a aplicação principal de **serving** via API REST, con
 | `make clean`| Remover imagem e containers parados          |
 | `make lint` | Checar estilo de código Python               |
 | `make init` | Instalar dependências locais                 |
+
+- [Link para a pasta de modelos (SharePoint)](https://flextronics365.sharepoint.com/:f:/r/sites/OASIS-IASense/Shared%20Documents/General/modelos?csf=1&web=1&e=fQjek1)
