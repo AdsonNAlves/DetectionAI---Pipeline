@@ -11,3 +11,6 @@ notebooks/test.ipynb
 notebooks/comparativo.ipynb
 test/20250924_frcnn/20250923_version_v1_last_None_arch_frcnn
 data2_external.yaml
+app/models/best_yolo11m.pt
+app/models/best_yolo8m.pt
+app/models/frcnn.pth

@@ -1,0 +1,26 @@
+{
+    "yolo11": {
+    "model": "yolo11m",
+    "model_version": "20250915v1",
+    "classes": ["broca"],
+    "input_size": [640, 640],
+    "bbox_format": "xywh",
+    "inference_time_ms": 211.71
+  },
+    "yolo8": {
+    "model": "yolo8m",
+    "model_version": "20250924v1",
+    "classes": ["broca"],
+    "input_size": [640, 640],
+    "bbox_format": "xywh",
+    "inference_time_ms": 230.33
+  },
+    "frcnn": {
+    "model": "frcnn",
+    "model_version": "20250924v1",
+    "classes": ["broca"],
+    "input_size": [640, 640],
+    "bbox_format": "xyxy",
+    "inference_time_ms": 590.28
+  }
+}

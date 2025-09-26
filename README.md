@@ -97,9 +97,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ```bash
 {
     "image_url": "https:xpto",
-    "image_id": 1,
-    "trap": 1,
-    "culture": "Cana",
+    "report_id": 1,
 }
 ```
 
@@ -109,9 +107,9 @@ Retorno de um JSON estruturado com os resultados da detecção.
 
 ```bash
 {
-    "trap": 1,
-    "image_id": 1,
-    "ìmage_det": image_base64,
+    "report_id": 1,
+    "ìmage_url": "https:xpto",
+    "ìmage_det": FormData,
     "detections": [
         {
             "id": 0,
@@ -141,20 +139,13 @@ Retorno de um JSON estruturado com os resultados da detecção.
     ],
 
     "metadata": {
-        "model": "yolo_v8m",
-        "model_versio": "2025_v1",
-        "classes": [
-            "Joaninha",
-            "Broca",
-        ],
-        "input_size": [
-            640, 640
-        ],
+        "model": "frcnn",
+        "model_version": "20250924v1",
+        "classes": ["broca"],
+        "input_size": [640, 640],
         "bbox_format": "xyxy",
-
-    },
-    "inference_time_ms": 30,
-    "normalized": false, 
+        "inference_time_ms": 590.28
+    }       
 }
 ```
 
