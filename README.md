@@ -207,3 +207,25 @@ Generalização: (mAP externo / mAP interno) — retenção de performance fora 
 ### Observações
 ![Observações](notebooks/figures/observacoes_modelos.png)  
 Definições resumidas dos critérios calculados.  
+
+# 📂 Diretório `app/`
+
+Este diretório contém a aplicação principal de **serving** via API REST, construída em **FastAPI** e empacotada em **Docker**. 
+
+---
+## 📌 Descrição
+
+- Automação **`Makefile`**. 
+- Comandos disponíveis (Makefile). 
+
+| Comando     | Descrição                                    |
+|-------------|----------------------------------------------|
+| `make help` | Mostra a ajuda com todos os comandos         |
+| `make build`| Build da imagem                              |
+| `make run`  | Rodar container **sem GPU**                  |
+| `make run-gpu` | Rodar container **com GPU NVIDIA**        |
+| `make shell`| Acessar o shell do container                 |
+| `make stop` | Parar o container                            |
+| `make clean`| Remover imagem e containers parados          |
+| `make lint` | Checar estilo de código Python               |
+| `make init` | Instalar dependências locais                 |

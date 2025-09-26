@@ -14,3 +14,4 @@ data2_external.yaml
 app/models/best_yolo11m.pt
 app/models/best_yolo8m.pt
 app/models/frcnn.pth
+
