@@ -90,64 +90,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	 vim \
 	 && rm -rf /var/lib/apt/lists/*
 ```
-## 📄 API Contract – Object Detection
-
-🔹 Request 
-
-```bash
-{
-    "image_url": "https:xpto",
-    "report_id": 1,
-}
-```
-
-🔹 Response
-
-Retorno de um JSON estruturado com os resultados da detecção.
-
-```bash
-{
-    "report_id": 1,
-    "ìmage_url": "https:xpto",
-    "ìmage_det": FormData,
-    "detections": [
-        {
-            "id": 0,
-            "class_id": 1,
-            "class_name": "Joaninha",
-            "confidence": 0.92,
-            "bbox": {
-                "xmin": 120,
-                "ymin": 50,
-                "xmax": 320,
-                "ymax": 400,
-            },
-        },
-
-        {
-            "id": 1,
-            "class_id": 2,
-            "class_name": "Broca",
-            "confidence": 0.92,
-            "bbox": {
-                "xmin": 120,
-                "ymin": 50,
-                "xmax": 320,
-                "ymax": 400,
-            },
-        }
-    ],
-
-    "metadata": {
-        "model": "frcnn",
-        "model_version": "20250924v1",
-        "classes": ["broca"],
-        "input_size": [640, 640],
-        "bbox_format": "xyxy",
-        "inference_time_ms": 590.28
-    }       
-}
-```
 
 ## Estrutura do diretório
 
