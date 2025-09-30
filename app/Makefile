@@ -46,7 +46,7 @@ clean: ## Remover imagem e containers parados
 
 lint: ## Checar estilo de código Python
 	@echo ">> Rodando flake8..."
-	flake8 app
+	flake8 .
 
 init: ## Instalar dependências locais
 	@echo ">> Instalando dependências..."
